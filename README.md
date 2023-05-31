@@ -38,4 +38,3 @@ export const FileName = (props: Props) => {
 | `cfcfr→` | client function component forwarded ref  |
 |   `efc→` | emotion function component               |
 | `efcfr→` | emotion function component forwarded ref |
-# react-next-snippets

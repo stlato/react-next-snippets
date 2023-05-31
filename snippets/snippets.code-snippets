@@ -1,0 +1,120 @@
+{
+  "functionComponent": {
+    "prefix": "fc",
+    "body": [
+      "type Props = {}",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}}: React.FC<Props> = (props) => {",
+      "  return (",
+      "    <div>${1:first}</div>",
+      "  )",
+      "}",
+      ""
+    ],
+    "description": "Creates a Arrow Function Component",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "functionComponentForwardedRef": {
+    "prefix": "fcfr",
+    "body": [
+      "import { forwardRef } from 'react'",
+      "",
+      "type Props = {} & React.ComponentPropsWithoutRef<'div'>",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}} = forwardRef<HTMLDivElement, Props>((props, ref) => {",
+      "  return (",
+      "    <div {...props} ref={ref}>",
+      "        ${1:first}",
+      "    </div>",
+      "  )",
+      "})",
+      ""
+    ],
+    "description": "Creates a Arrow Function Component ForwardedRef",
+    "scope": "typescript,typescriptreact"
+  },
+  "clientFunctionComponent": {
+    "prefix": "cfc",
+    "body": [
+      "'use client'",
+      "",
+      "type Props = {}",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}}: React.FC<Props> = (props: Props) => {",
+      "  return (",
+      "    <div>${1:first}</div>",
+      "  )",
+      "}",
+      ""
+    ],
+    "description": "Creates a Arrow Function Component works fine on Next.js App Router",
+    "scope": "typescript,typescriptreact"
+  },
+  "clientFunctionComponentForwardedRef": {
+    "prefix": "cfcfr",
+    "body": [
+      "'use client'",
+      "",
+      "import { forwardRef } from 'react'",
+      "",
+      "type Props = {} & React.ComponentPropsWithoutRef<'div'>",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}} = forwardRef<HTMLDivElement, Props>((props, ref) => {",
+      "  return (",
+      "    <div {...props} ref={ref}>",
+      "        ${1:first}",
+      "    </div>",
+      "  )",
+      "})",
+      ""
+    ],
+    "description": "Creates a Arrow Function Component ForwardedRef works fine on Next.js App Router",
+    "scope": "typescript,typescriptreact"
+  },
+  "emotionFunctionComponent": {
+    "prefix": "efc",
+    "body": [
+      "import { css } from '@emotion/css'",
+      "import { forwardRef } from 'react'",
+      "",
+      "type Props = {}",
+      "",
+      "const root = css`",
+      "`",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}}: React.FC<Props> = (props) => {",
+      "  return (",
+      "    <div>${1:first}</div>",
+      "  )",
+      "}",
+      ""
+    ],
+    "description": "Creates a Arrow Function Component works fine on Emotion",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "emotionFunctionComponentForwardRef": {
+    "prefix": "efcfr",
+    "body": [
+      "import { css, cx } from '@emotion/css'",
+      "import { forwardRef } from 'react'",
+      "",
+      "type Props = {} & React.ComponentPropsWithoutRef<'div'>",
+      "",
+      "const root = css`",
+      "`",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}} = forwardRef<HTMLDivElement, Props>((props, ref) => {",
+      "  const { children, className, ...rest } = props",
+      "",
+      "  return (",
+      "    <div className={cx(root, className)} {...rest} ref={ref}>",
+      "      {children}",
+      "    </div>",
+      "  )",
+      "})",
+      ""
+    ],
+    "description": "Creates a Arrow Function Component ForwardedRef works fine on Emotion",
+    "scope": "typescript,typescriptreact"
+  }
+}
